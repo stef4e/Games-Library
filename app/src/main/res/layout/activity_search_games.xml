@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#96B2C8"
+    tools:context=".Gameplay.GamesSearchActivity">
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/baloo_thambi"
+        android:text="Games Library"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/goToLibraryButton" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/gameName"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_edit_text"
+        android:fontFamily="@font/baloo_thambi"
+        android:gravity="center"
+        android:hint="Enter game name"
+        app:layout_constraintEnd_toStartOf="@id/searchButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#1D1A76"
+        android:fontFamily="@font/baloo_thambi"
+        android:text="Search"
+        app:layout_constraintBottom_toBottomOf="@+id/gameName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/gameName"
+        app:layout_constraintTop_toTopOf="@+id/gameName"
+        app:layout_constraintVertical_bias="0.727" />
+
+    <Button
+        android:id="@+id/goToLibraryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:backgroundTint="#1D1A76"
+        android:fontFamily="@font/baloo_thambi"
+        android:text="Library"
+        app:layout_constraintEnd_toStartOf="@id/logoutButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:backgroundTint="#1D1A76"
+        android:fontFamily="@font/baloo_thambi"
+        android:text="Logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gamesRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
